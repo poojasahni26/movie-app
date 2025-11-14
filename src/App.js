@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import Movies from './pages/Movies';
 import TvShows from './pages/TvShows';
 import Upcoming from './pages/Upcoming';
-import MovieDetails from './Pages/MovieDetails';
+import MovieDetails from './pages/MovieDetails';
 import Auth from './pages/Auth';
 import './index.css';
 import './App.css';
