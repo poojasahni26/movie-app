@@ -1,0 +1,47 @@
+/* Base */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #1a1a1a; color: white; }
+.logo a { font-size: 1.8rem; color: white; text-decoration: none; }
+.nav a { color: white; margin: 0 1rem; text-decoration: none; }
+.menu-toggle { display: none; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; }
+.footer { text-align: center; padding: 1rem; background: #1a1a1a; color: white; }
+
+/* Pages */
+.page-content { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; text-decoration: none; color: inherit; }
+.card img { width: 100%; height: 300px; object-fit: cover; }
+.card h3 { padding: 0.5rem; }
+
+/* Home/Community */
+.hero { display: flex; align-items: center; padding: 4rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+.hero-content { flex: 1; max-width: 50%; }
+.hero-content h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero-image { flex: 1; text-align: center; }
+.hero-image img { max-width: 100%; border-radius: 10px; }
+.community-posts { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+.posts-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.post { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.post-header { display: flex; align-items: center; margin-bottom: 1rem; }
+.avatar { border-radius: 50%; margin-right: 1rem; }
+.post-actions button { margin-right: 1rem; padding: 0.5rem 1rem; background: #f4f4f4; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; }
+
+/* Login */
+.login-page { display: flex; justify-content: center; align-items: center; height: 100vh; }
+.login-form { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+.login-form input { display: block; width: 100%; margin: 1rem 0; padding: 0.5rem; }
+.login-form button { padding: 0.8rem 1.5rem; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+/* Details */
+.details { padding: 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+.details img { max-width: 300px; border-radius: 10px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-content { max-width: 100%; }
+  .nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #1a1a1a; padding: 1rem; }
+  .nav.show { display: flex; }
+  .menu-toggle { display: block; }
+  .grid { grid-template-columns: 1fr; }
+}
