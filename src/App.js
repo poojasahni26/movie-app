@@ -8,7 +8,8 @@ import Movies from './components/Movies';
 import TvShows from './components/TvShows';
 import Upcoming from './components/Upcoming';
 import MovieDetails from './components/MovieDetails';
-import './styles/App.css';
+import './styles/App.css';  // <-- Add this line here
+
 
 function App() {
   return (
