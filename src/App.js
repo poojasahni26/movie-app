@@ -1,27 +1,30 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Movies from './pages/Movies';
-import TvShows from './pages/TvShows';
-import Upcoming from './pages/Upcoming';
-import MovieDetails from './pages/MovieDetails';
-import Auth from './pages/Auth';
-import './index.css';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Login from './components/Login';
+import Home from './components/Home';
+import Movies from './components/Movies';
+import TvShows from './components/TvShows';
+import Upcoming from './components/Upcoming';
+import MovieDetails from './components/MovieDetails';
+import './styles/App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
+    <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/movies" element={<Movies />} />
-        <Route path="/tv" element={<TvShows />} />
+        <Route path="/tvshows" element={<TvShows />} />
         <Route path="/upcoming" element={<Upcoming />} />
-        <Route path="/details/:type/:id" element={<MovieDetails />} />
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
+        <Route path="/tv/:id" element={<MovieDetails />} />
       </Routes>
-    </BrowserRouter>
+      <Footer />
+    </Router>
   );
 }
 
